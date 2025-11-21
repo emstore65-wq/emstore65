@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM Store - Telefonía y Accesorios Premium | Los Mejores Precios en Colombia</title>
+    <meta name="description" content="EM Store - Tu tienda de confianza en telefonía y accesorios en Colombia. Los mejores productos al mejor precio. Envío rápido, garantía total y pago seguro.">
+    <meta name="keywords" content="telefonía, celulares, smartphones, accesorios, auriculares, cargadores, fundas, smartwatch, Colombia, Villavicencio">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <a href="https://wa.me/573224139247?text=Hola EMStore,estoy interesado en sus productos" 
+        target="_blank" 
+        class="whatsapp-float"
+        title="Contáctanos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <a href="#productos" id="scrollCta" class="scroll-cta">
+        <i class="fas fa-bolt"></i> ¡Ver Ofertas!
+    </a>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo_emstore.jpg" alt="Logo EM Store Telefonía y Accesorios" class="logo-header-img">
+                <h1>EM STORE</h1>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="#productos" onclick="closeMenu()">Productos</a></li>
+                <li><a href="#nosotros" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h2>Tecnología que Impulsa tu Día</h2>
+                <p>Equipos Samsung, Redmi y Accesorios Premium con la mejor garantía en Colombia.</p>
+                <div class="cta-buttons">
+                    <a href="#oferta" class="cta-button">
+                        <i class="fas fa-tag"></i> Oferta de Hoy
+                    </a>
+                    <a href="https://wa.me/573001234567?text=Hola%20EM%20Store" target="_blank" class="cta-button secondary">
+                        <i class="fab fa-whatsapp"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="oferta-relampago" id="oferta">
+            <div class="oferta-content">
+                <span class="oferta-badge">¡ULTIMAS UNIDADES!</span>
+                <h3>REDMI NOTE 14 PRO - El Potente a Precio Irresistible</h3>
+                <div class="oferta-details">
+                    <div class="oferta-precios">
+                        <span class="precio-oferta-anterior">$1.799.900 COP</span>
+                        <span class="precio-oferta-actual">$1.499.900 COP</span>
+                    </div>
+                    <div class="oferta-timer" id="ofertaTimer">
+                        Tiempo restante: <span class="timer-value">01</span>h : <span class="timer-value">30</span>m : <span class="timer-value">55</span>s
+                    </div>
+                </div>
+                <button class="cta-button btn-comprar" onclick="comprarProducto('Redmi Note 14 Pro (Oferta Relámpago)', '1.299.900')">
+                    <i class="fas fa-shopping-basket"></i> ¡Aprovechar la Oferta!
+                </button>
+            </div>
+        </section>
+
+        <section class="productos" id="productos">
+            <h2 class="section-title">Nuestros Productos Estrella</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts('all')">Todos</button>
+                <button class="filter-btn" onclick="filterProducts('smartphone')">Telefonía</button>
+                <button class="filter-btn" onclick="filterProducts('accesorio')">Accesorios</button>
+                <button class="filter-btn" onclick="filterProducts('oferta')">Ofertas</button>
+            </div>
+            
+            <div class="productos-grid" id="productosGrid">
+                
+                <div class="producto-card" data-category="smartphone oferta">
+                    <span class="producto-badge">¡El Más Vendido!</span>
+                    <div class="producto-img"><i class="fas fa-mobile-alt"></i></div> 
+                    <h3>Redmi Note 14 Pro</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+                    <p>Cámara Pro, batería de larga duración y rendimiento superior. ¡El favorito de EM Store!</p>
+                    <div class="precio-container">
+                        <div class="precio-anterior">$1.599.900 COP</div>
+                        <div class="precio">$1.299.900 COP</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('Redmi Note 14 Pro', '1.299.900')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+
+                <div class="producto-card" data-category="smartphone">
+                    <span class="producto-badge">¡Gama Alta!</span>
+                    <div class="producto-img"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Samsung A26 5G</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <p>Diseño elegante, excelente pantalla  y rendimiento de bateria.</p>
+                    <div class="precio-container">
+                        <div class="precio-anterior">$1.599.999 COP</div>
+                        <div class="precio">$1.499.900 COP</div> 
+                        <div class="cuotas">¡Precio de lanzamiento!</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('Samsung Galaxy S24 FE', '3.299.900')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+
+                <div class="producto-card" data-category="smartphone oferta">
+                    <div class="producto-img"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Samsung A16</h3>
+                    <div class="rating">⭐⭐⭐⭐ (4.7)</div>
+                    <p>Cámara Leica profesional, carga ultra-rápida y procesador Dimensity 9200+.</p>
+                    <div class="precio-container">
+                        <div class="precio-anterior">$1.300.000 COP</div>
+                        <div class="precio">$1.000.000 COP</div>
+                        <div class="cuotas">¡20% de Descuento!</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('Xiaomi 13T Pro', '2.399.900')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+
+                <div class="producto-card" data-category="accesorio">
+                    <span class="producto-badge">Audio Premium</span>
+                    <div class="producto-img"><i class="fas fa-headset"></i></div>
+                    <h3>AirPods Pro 2a Generación</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <p>Audio espacial, cancelación de ruido superior y estuche con carga MagSafe.</p>
+                    <div class="precio-container">
+                        <div class="precio">$90.000 COP</div>
+                        <div class="cuotas">Garantía oficial</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('AirPods Pro 2', '980.000')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+
+                <div class="producto-card" data-category="accesorio oferta">
+                    <span class="producto-badge">¡30% OFF!</span>
+                    <div class="producto-img"><i class="fas fa-volume-up"></i></div>
+                    <h3>Parlante JBL Flip 6 Original</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <p>Sonido potente y graves profundos. Sumergible (IPX7). Ideal para exteriores.</p>
+                    <div class="precio-container">
+                        <div class="precio-anterior">$290.000 COP</div>
+                        <div class="precio">$270.000 COP</div>
+                        <div class="cuotas">Precio de locura</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('Parlante JBL Flip 6', '385.000')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+
+                <div class="producto-card" data-category="accesorio">
+                    <div class="producto-img"><i class="fas fa-charging-station"></i></div>
+                    <h3>Cargador Rápido GaN 65W + Cable</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <p>Carga tu celular al 50% en solo 30 minutos. Tecnología GaN de última generación.</p>
+                    <div class="precio-container">
+                        <div class="precio">$60.000 COP</div>
+                        <div class="cuotas">Pago único</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('Cargador Rápido 65W', '159.000')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+                
+                <div class="producto-card" data-category="accesorio">
+                    <span class="producto-badge">Capacidad Extrema</span>
+                    <div class="producto-img"><i class="fas fa-battery-full"></i></div>
+                    <h3>Power Bank Inalámbrico 20000mAh</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <p>Carga inalámbrica y rápida (PD). Mantente cargado por días.</p>
+                    <div class="precio-container">
+                        <div class="precio">$60.000 COP</div>
+                        <div class="cuotas">Pago único</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('Batería Portátil 20000mAh', '189.900')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+                
+                 <div class="producto-card" data-category="accesorio oferta">
+                    <div class="producto-img"><i class="fas fa-watch"></i></div>
+                    <h3>SmartWatch Ultra X9</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <p>Monitor de salud completo, GPS integrado y pantalla AMOLED brillante.</p>
+                    <div class="precio-container">
+                        <div class="precio-anterior">$250.000 COP</div>
+                        <div class="precio">$210.000 COP</div>
+                        <div class="cuotas">Precio de Oferta</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('SmartWatch Ultra X9', '299.900')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+                
+                <div class="producto-card" data-category="accesorio">
+                    <div class="producto-img"><i class="fas fa-running"></i></div>
+                    <h3>Audífonos Harvic Deportivos (Bluetooth)</h3>
+                    <div class="rating">⭐⭐⭐⭐ (4.6)</div>
+                    <p>Resistentes al sudor (IPX5) y ajuste perfecto para el ejercicio. 8 horas de batería.</p>
+                    <div class="precio-container">
+                        <div class="precio">$50.000 COP</div>
+                        <div class="cuotas">Pago único</div>
+                    </div>
+                    <button class="btn-comprar" onclick="comprarProducto('Audífonos TWS Deportivos', '99.900')">
+                        <i class="fab fa-whatsapp"></i> Comprar Ahora
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="caracteristicas">
+            <h2 class="section-title">¿Por Qué Elegir EM Store?</h2>
+            <div class="caracteristicas-grid">
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">
+                        <i class="fas fa-shipping-fast" style="color: var(--secondary-color);"></i>
+                    </div>
+                    <h3>Envío Rápido y Seguro</h3>
+                    <p>Entregas garantizadas en las principales ciudades de Colombia.</p>
+                </div>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">
+                        <i class="fas fa-shield-alt" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Garantía Total</h3>
+                    <p>Cobertura de 1 año contra defectos de fábrica.</p>
+                </div>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">
+                        <i class="fas fa-hand-holding-usd" style="color: var(--secondary-color);"></i>
+                    </div>
+                    <h3>Precios Competitivos</h3>
+                    <p>La mejor calidad al mejor precio del mercado colombiano.</p>
+                </div>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">
+                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Productos Originales</h3>
+                    <p>Solo vendemos equipos y accesorios 100% auténticos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos" id="nosotros"> 
+             <h2 class="section-title">Sobre Nosotros</h2>
+             <div class="form-container" style="max-width: 900px; margin: 0 auto; text-align: left;">
+                 <p style="font-size: 1.1rem; color: var(--text-light); opacity: 0.9;">
+                    EM Store nació de la pasión por la tecnología premium y la necesidad de ofrecer productos de alta gama sin comprometer la calidad o el servicio. Desde 2020, hemos crecido para convertirnos en su fuente de confianza para los últimos smartphones y accesorios. Nos dedicamos a proporcionar una experiencia de compra segura, transparente y de primer nivel para todos nuestros clientes. ¡Tu satisfacción es nuestra prioridad!
+                 </p>
+             </div>
+        </section>
+
+        <section class="contacto-section" id="contacto">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <select id="subject" name="subject">
+                            <option value="consulta">Consulta General</option>
+                            <option value="garantia">Pregunta sobre Garantía</option>
+                            <option value="pedido">Estado de mi Pedido</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>EM Store</h3>
+                <p>Tu tienda de confianza para tecnología premium.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Villavicencio, Meta</p>
+                <p><i class="fas fa-envelope"></i> soporte@emstore.com</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section payment">
+                <h3>Medios de Pago</h3>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                    <i class="fas fa-university payment-icon" title="Transferencia Bancaria"></i>
+                    <i class="fas fa-money-bill-wave payment-icon" title="Pago en Efectivo"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 EM Store | Todos los derechos reservados
+        </div>
+    </footer>
+
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></span>
+            <div id="modalIcon" class="modal-icon" style="color: var(--secondary-color);"><i class="fas fa-check-circle"></i></div>
+            <h3 id="modalTitle">Procesando...</h3>
+            <p id="modalMessage">Su solicitud está siendo procesada.</p>
+            <button class="cta-button" onclick="closeModal()">Entendido</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
